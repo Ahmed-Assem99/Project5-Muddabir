@@ -687,3 +687,212 @@ object-fit: contain;
 }
 
 /* ------------------charts section------------------ */
+.main-charts {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em 1em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "summary charts payments"
+    "summary accounts payments";
+}
+.widget-style{
+    background-color: white;
+    border-radius: 24px;
+    border: 2px solid var(--border-color);
+    padding:24px;
+}
+/* ----------Summary section-------------- */
+.summary { grid-area: summary;
+ }
+.summary-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.summary-head a{
+    font-size: 14px;
+}
+.summary-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.summary-card {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  gap: 1em 0.75em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "summary-card-r . summary-card-l"
+    "summary-card-b summary-card-b summary-card-b";
+    border-radius: 20px;
+    padding: 12px 24px;
+}
+.summary-gradient{
+    background-image: linear-gradient(90deg,#F0F6FF,#EEF2FF);
+    border: 1px solid #DBEAFF;
+}
+.summary-card-r { grid-area: summary-card-r; }
+.s-card-1 .s-p-1{
+    font-size: 16px;
+    color: #165DFC;
+}
+.s-card-1 .s-p-2{
+    font-size: 20px;
+    color: #1C398E;
+    font-weight: bold;
+}
+
+.summary-card-l { 
+    grid-area: summary-card-l;
+ }
+.s-card-1 .s-p-3{
+    color: var(--parag-color);
+    font-size: 14px;
+}
+.s-card-1 .s-p-4{
+    color: #00A63D;
+    font-size: 16px;
+    font-weight: bold;
+}
+.summary-card-b { grid-area: summary-card-b;
+height: fit-content; }
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+background-image: linear-gradient(90deg,#2D7FFF,#615FFF);
+  border-radius: 99px;
+}
+.fill2{
+    height: 100%;
+  border-radius: 99px;  
+  background-color:  #FF6900;
+}
+.fill3{
+    background-color: #FB2B37;
+}
+.fill4{
+    background-color: #F6339A;
+}
+.fill5{
+    background-color: #00C951;
+}
+.progress-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.progress-p-1{
+    font-size: 12px;
+    margin: 0;
+    color: var(--parag-color);
+}
+.summary-card2{
+    border: 1px solid #D4D8DD;
+    margin-top: 10px;
+    width: 90%;
+    padding: 12px 20px;
+    border-radius: 18px;
+    transition: 0.3s ease;
+}
+.summary-card2:hover{
+    background-color: #F6F6F8;
+    transform: translate(0px,-3px);
+    box-shadow: 0px 2px 3px 1px #E5E5E5;
+}
+.summary-card2-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.s-card2-r{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.s-card2-p1{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+.s-card2-p2{
+    font-size: 12px;
+    color: var(--parag-color);
+    font-weight: bold;
+}
+.s-card2-p3{
+    font-size: 12px;
+    color: #156534;
+    font-weight: bold;
+}
+.s-c2-p3-a{
+    color: #991B1B;
+}
+.s-c2-p3-b{
+    color: #92400D;
+}
+.progress-perc{
+    background-color: #DCFCE7;
+    border-radius: 12px;
+    padding: 2px 4px;
+    width: fit-content;
+}
+.prog-perc2{
+    background-color: #FFE2E2;
+}
+.prog-perc3{
+    background-color: #FEF3C7;
+}
+.s-card2-icon{
+    background-color: #FFEDD4;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 10px;
+}
+.s2-icon2{
+    background-color: #FFE2E2;
+}
+.s-card2-icon3{
+    background-color: #FCE7F4;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 10px;
+}
+.s-card2-icon4{
+    background-color: #DCFCE7;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 10px;
+}
+.s-card2-icon img{
+    filter: brightness(0) saturate(100%) invert(41%) sepia(99%) saturate(1800%) hue-rotate(10deg) brightness(103%);
+    width: 24px;
+    object-fit: contain;
+}
+.s2-icon2 img{
+    filter: brightness(80%) saturate(100%) invert(13%) sepia(99%) saturate(7000%) hue-rotate(1deg) brightness(105%);
+}
+.s-card2-icon3 img{
+     width: 24px;
+    object-fit: contain;
+}
+.s-card2-icon4 img{
+     width: 24px;
+    object-fit: contain;
+}
+/* ----------------------------------------------- */
+.accounts { grid-area: accounts; }
+
+.payments { grid-area: payments; }
+
+.charts { grid-area: charts; }
