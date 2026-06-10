@@ -161,6 +161,34 @@ img{
     color: var(--parag-color);
     font-weight: bold;
 }
+@media screen and (max-width:1280px){
+    .rs-head-text,.button1-text,.rs-button span,.special-p,.rs-button2 span{
+        display: none;
+    }
+    .right-side{
+        width: 7%;
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main{
+        width: 93%;
+    }
+    .rs-button1,.rs-button2,.rs-logo{
+        padding: 6px;
+        margin: auto;
+    }
+}
+@media screen and (max-width:770px){
+    .right-side{
+        display: none;
+        width: 0%;
+    }
+    .main{
+        width: 100%;
+    }
+}
 /*--------------------left-main-head--------- */
 .main-head {
     margin-top: 30px;
@@ -170,7 +198,18 @@ grid-template-rows: repeat(6, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
-
+@media screen and (max-width:770px){
+    .main-head{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+    .top-bar,.body1,.body2,.body3{
+        width: 100%;
+    }
+}
 .top-bar { 
     grid-area: 1 / 1 / 3 / 15; 
     border: 2px solid var(--border-color);
@@ -322,6 +361,7 @@ object-fit: contain;
     "content-activity content-table content-table"
     "content-invoice content-table content-table";
 }
+
 .content-activity {
     background-color: #FFFFFF;
     border-radius: 24px;
@@ -685,7 +725,26 @@ object-fit: contain;
 .filter-1{
       filter: invert(18%) sepia(97%) saturate(1200%) hue-rotate(10deg) brightness(85%) contrast(105%);
 }
-
+@media screen and (max-width:1280px){  
+    .main-content{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr;
+        grid-template-areas: 
+        "content-activity content-invoice"
+        "content-table content-table";
+    }
+}
+@media screen and (max-width:770px){
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .content-activity,.content-table,.content-invoice{
+        width: 100%;
+    }
+}
 /* ------------------charts section------------------ */
 .main-charts {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -695,6 +754,26 @@ object-fit: contain;
   grid-template-areas:
     "summary charts payments"
     "summary accounts payments";
+}
+@media screen and (max-width:1280px){
+    .main-charts{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
+    grid-template-areas: 
+    "charts accounts"
+    "summary payments";
+    }
+}
+@media screen and (max-width:770px){
+    .main-charts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .summary,.charts,.payments,.accounts{
+        width: 100%;
+    }
 }
 .widget-style{
     background-color: white;
@@ -722,13 +801,18 @@ object-fit: contain;
 .summary-card {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 0.5fr;
-  gap: 1em 0.75em;
+  gap: 0.5em 0.5em;
   grid-auto-flow: row;
   grid-template-areas:
     "summary-card-r . summary-card-l"
     "summary-card-b summary-card-b summary-card-b";
     border-radius: 20px;
     padding: 12px 24px;
+}
+@media screen and (max-width:1280px){
+    .summary-card{
+        width: 90%;
+    }
 }
 .summary-gradient{
     background-image: linear-gradient(90deg,#F0F6FF,#EEF2FF);
@@ -1037,23 +1121,23 @@ filter: brightness(0) saturate(100%) invert(45%) sepia(98%) saturate(600%) hue-r
     align-items: center;
     width: 100%;
     padding: 16px 8px;
-    gap: 230px;
+    gap: 20px;
     margin-top: 20px;
 }
 .card-container1{
     perspective: 1000px;
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 190px;
 }
 .card-container2{
     perspective: 1000px;
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 190px;
 }
 .card-container3{
     perspective: 1000px;
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 190px;
 }
 .thecard{
     position: relative;
@@ -1075,7 +1159,8 @@ transition: all 1s ease;
     background-color: #3729AB;
     border-radius: 16px;
     padding: 16px 24px;
-    width: 100%;
+    width: 400px;
+    height: 190px;
     position: absolute;
     backface-visibility: hidden;
 }
